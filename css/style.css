@@ -7,7 +7,7 @@
 }
 
 body {
-  width: 1650px;
+  width: 1500px;
   margin: 0 auto;
   font-family: "Kumbh Sans", sans-serif;
   position: relative;
@@ -49,11 +49,11 @@ body.onSlider {
 
 .close {
   position: relative;
-  font-size: 24px;
+  font-size: 21px;
   font-weight: bold;
   color: hsl(26, 100%, 55%);
   top: -10px;
-  left: 700px;
+  left: 530px;
   z-index: 10;
   cursor: pointer;
 }
@@ -67,63 +67,69 @@ body.onSlider {
 
 .slider-left {
   position: relative;
-  font-size: 32px;
   font-weight: bold;
   color: black;
   z-index: 15;
   cursor: pointer;
   background-color: white;
   border-radius: 50%;
-  width: 44px;
+  width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 350px;
+  padding: 10px;
+  top: 250px;
+}
+
+.slider-left ion-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
 }
 
 .slider-left:hover {
   color: hsl(26, 100%, 55%);
 }
 
-.slider-left p {
-  margin-bottom: 5px;
-}
-
 .slider-right {
   position: relative;
-  font-size: 32px;
   font-weight: bold;
   color: black;
   z-index: 15;
   cursor: pointer;
   background-color: white;
   border-radius: 50%;
-  width: 44px;
+  width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 350px;
-  left: 660px;
+  padding: 10px;
+  top: 250px;
+  left: 520px;
+}
+
+.slider-right ion-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
 }
 
 .slider-right:hover {
   color: hsl(26, 100%, 55%);
 }
 
-.slider-right p {
-  margin-bottom: 5px;
-}
-
 .images-in-slider {
   display: flex;
-  width: 750px;
+  width: 600px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
 .big-image-in-slider img {
-  width: 704px;
+  width: 500px;
   border-radius: 16px;
   cursor: pointer;
   display: none;
@@ -136,13 +142,14 @@ body.onSlider {
 .small-images-in-slider {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 45px;
   margin-top: 24px;
-  width: 704px;
+  width: 600px;
 }
 
 .small-image-in-slider img {
-  width: 130px;
+  width: 90px;
   border-radius: 16px;
   cursor: pointer;
 }
@@ -155,8 +162,11 @@ body.onSlider {
 .navigation {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 40px 0;
+  justify-content: center;
+  width: 1300px;
+  margin: 0 auto;
+  gap: 400px;
+  padding: 30px 0;
   border-bottom: 1px solid rgb(169, 168, 168);
 }
 
@@ -167,7 +177,7 @@ body.onSlider {
 }
 
 .logo-image {
-  width: 180px;
+  width: 160px;
 }
 
 .list-items {
@@ -177,9 +187,9 @@ body.onSlider {
 }
 
 .list-item {
-  font-size: 21px;
+  font-size: 18px;
   color: grey;
-  margin-right: 30px;
+  margin-right: 25px;
   cursor: pointer;
 }
 
@@ -200,25 +210,26 @@ body.onSlider {
 
 .cart-icon svg path {
   fill: black;
-  transform: scale(1.3);
+  transform: scale(1);
 }
 
 .number-of-products-in-icon {
   position: absolute;
   top: -15px;
-  right: -10px;
+  right: -8px;
   background-color: hsl(26, 100%, 55%);
   color: white;
-  padding: 1px 4px;
+  padding: 1px 2px;
   border-radius: 8px;
 }
 
 .profile-image {
-  width: 55px;
-  height: 55px;
-  margin-left: 30px;
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
   border-radius: 50%;
   cursor: pointer;
+  margin-top: -10px;
 }
 
 .profile-image:hover {
@@ -226,10 +237,10 @@ body.onSlider {
 }
 
 .cart-menu {
-  width: 450px;
+  width: 375px;
   background-color: white;
   position: absolute;
-  top: 100px;
+  top: 75px;
   right: 0;
   box-shadow: 0px 5px 30px rgba(149, 148, 148, 0.8);
   display: flex;
@@ -244,7 +255,7 @@ body.onSlider {
 
 .cart-header {
   width: 100%;
-  font-size: 21px;
+  font-size: 18px;
   font-weight: bold;
   padding: 25px 20px;
   border-bottom: 1px solid rgb(149, 149, 149);
@@ -261,7 +272,7 @@ body.onSlider {
 }
 
 .cart-empty {
-  padding: 115px 0;
+  padding: 100px 0;
   display: none;
 }
 
@@ -289,13 +300,13 @@ body.onSlider {
 }
 
 .items-in-cart img {
-  width: 100px;
+  width: 80px;
   margin-right: 15px;
   border-radius: 8px;
 }
 
 .description-of-item {
-  width: 285px;
+  width: 225px;
 }
 
 .total-price {
@@ -312,29 +323,30 @@ body.onSlider {
   margin-top: 15px;
   background-color: hsl(26, 100%, 55%);
   color: white;
-  padding: 20px 165px;
+  padding: 20px 130px;
   border-radius: 8px;
   cursor: pointer;
 }
 
 .main {
-  width: 1500px;
+  width: 1350px;
   display: flex;
-  margin: 125px auto 125px;
+  margin: 100px auto 100px;
   align-items: center;
 }
 
 .images {
   display: flex;
-  width: 750px;
+  width: 600px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-right: 90px;
+  margin-left: 80px;
 }
 
 .big-image img {
-  width: 704px;
+  width: 570px;
   border-radius: 16px;
   cursor: pointer;
   display: none;
@@ -349,11 +361,11 @@ body.onSlider {
   align-items: center;
   justify-content: space-between;
   margin-top: 24px;
-  width: 704px;
+  width: 570px;
 }
 
 .small-image img {
-  width: 130px;
+  width: 100px;
   border-radius: 16px;
   cursor: pointer;
 }
@@ -370,21 +382,21 @@ body.onSlider {
 }
 
 .small-header {
-  font-size: 24px;
+  font-size: 21px;
   font-weight: bold;
   letter-spacing: 2px;
   color: hsl(26, 100%, 55%);
-  margin-bottom: 24px;
+  margin-bottom: 21px;
 }
 
 .main-header {
-  font-size: 64px;
-  margin-bottom: 36px;
+  font-size: 52px;
+  margin-bottom: 30px;
 }
 
 .product-description {
   font-size: 21px;
-  margin-bottom: 56px;
+  margin-bottom: 48px;
 }
 
 .price {
@@ -393,12 +405,12 @@ body.onSlider {
 }
 
 .price h2 {
-  font-size: 36px;
+  font-size: 30px;
 }
 
 .discount {
   padding: 4px 8px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   border-radius: 5px;
   color: hsl(26, 100%, 55%);
@@ -425,19 +437,19 @@ body.onSlider {
   align-items: center;
   justify-content: center;
   gap: 48px;
-  padding: 16px 24px;
+  padding: 12px 20px;
   background-color: rgb(237, 237, 237);
   border-radius: 8px;
 }
 
 .number-of-items p {
-  font-size: 21px;
+  font-size: 18px;
 }
 
 .increase,
 .decrease {
   cursor: pointer;
-  font-size: 32px;
+  font-size: 28px;
   color: hsl(26, 100%, 55%);
 }
 
@@ -445,10 +457,10 @@ body.onSlider {
   display: flex;
   align-items: center;
   gap: 24px;
-  padding: 16px 36px;
+  padding: 14px 34px;
   color: white;
   border-radius: 8px;
-  font-size: 18px;
+  font-size: 16px;
   box-shadow: 0 2px 15px hsl(26, 100%, 55%);
   background-color: hsl(26, 100%, 55%);
   cursor: pointer;

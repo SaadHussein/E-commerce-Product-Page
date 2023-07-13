@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | E-commerce product page</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+  </head>
+  <body class="body">
+    <div class="backdrop"></div>
+    <div class="image-slider">
+      <div class="close">X</div>
+      <div class="slider">
+        <div class="slider-left"><p><</p></div>
+        <div class="slider-right"><p>></p></div>
+      </div>
+
+      <div class="images-in-slider">
+        <div class="big-image-in-slider">
+          <img
+            class="main-image-in-slider activeImageInSlider"
+            src="images/image-product-1.jpg"
+            alt="Product Image"
+          />
+          <img
+            class="main-image-in-slider"
+            src="images/image-product-2.jpg"
+            alt="Product Image"
+          />
+          <img
+            class="main-image-in-slider"
+            src="images/image-product-3.jpg"
+            alt="Product Image"
+          />
+          <img
+            class="main-image-in-slider"
+            src="images/image-product-4.jpg"
+            alt="Product Image"
+          />
+        </div>
+        <div class="small-images-in-slider">
+          <div class="small-image-in-slider">
+            <img
+              class="active-in-slider"
+              src="images/image-product-1-thumbnail.jpg"
+              alt="Product Image"
+            />
+          </div>
+          <div class="small-image-in-slider">
+            <img
+              src="images/image-product-2-thumbnail.jpg"
+              alt="Product Image"
+            />
+          </div>
+          <div class="small-image-in-slider">
+            <img
+              src="images/image-product-3-thumbnail.jpg"
+              alt="Product Image"
+            />
+          </div>
+          <div class="small-image-in-slider">
+            <img
+              src="images/image-product-4-thumbnail.jpg"
+              alt="Product Image"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="navigation">
+      <div class="logo-list">
+        <img class="logo-image" src="images/logo.svg" alt="Logo Image" />
+        <ul class="list-items">
+          <li class="list-item">Collections</li>
+          <li class="list-item">Men</li>
+          <li class="list-item">Women</li>
+          <li class="list-item">About</li>
+          <li class="list-item">Contact</li>
+        </ul>
+      </div>
+      <div class="cart-profile">
+        <div class="cart-icon">
+          <svg
+            class="cart"
+            width="28"
+            height="26"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+              fill="#69707D"
+              fill-rule="nonzero"
+            />
+          </svg>
+          <div class="number-of-products-in-icon">0</div>
+        </div>
+
+        <img
+          class="profile-image"
+          src="images/image-avatar.png"
+          alt="Image Pofile"
+        />
+      </div>
+    </nav>
+
+    <div class="cart-menu">
+      <div class="cart-header">Cart</div>
+      <div class="cart-container">
+        <div class="cart-empty activeee">Your cart is Empty.</div>
+        <div class="cart-have-items">
+          <div class="items-in-cart">
+            <img
+              src="images/image-product-1-thumbnail.jpg"
+              alt="image of item"
+            />
+            <div class="description-of-item">
+              <p>Fall Limited Edition Sneakers</p>
+              <p>
+                $125.00 x <span class="quantity-of-items"></span>
+                <span class="total-price"></span>
+              </p>
+            </div>
+            <div class="icon-for-delete">
+              <svg
+                width="14"
+                height="16"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <defs>
+                  <path
+                    d="M0 2.625V1.75C0 1.334.334 1 .75 1h3.5l.294-.584A.741.741 0 0 1 5.213 0h3.571a.75.75 0 0 1 .672.416L9.75 1h3.5c.416 0 .75.334.75.75v.875a.376.376 0 0 1-.375.375H.375A.376.376 0 0 1 0 2.625Zm13 1.75V14.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 1 14.5V4.375C1 4.169 1.169 4 1.375 4h11.25c.206 0 .375.169.375.375ZM4.5 6.5c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Zm3 0c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Zm3 0c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Z"
+                    id="a"
+                  />
+                </defs>
+                <use fill="#C3CAD9" fill-rule="nonzero" xlink:href="#a" />
+              </svg>
+            </div>
+          </div>
+          <div class="checkout">Checkout</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="images">
+        <div class="big-image">
+          <img
+            class="main-image activeImage"
+            src="images/image-product-1.jpg"
+            alt="Product Image"
+            data-id="image-1"
+          />
+          <img
+            class="main-image"
+            src="images/image-product-2.jpg"
+            alt="Product Image"
+            data-id="image-2"
+          />
+          <img
+            class="main-image"
+            src="images/image-product-3.jpg"
+            alt="Product Image"
+            data-id="image-3"
+          />
+          <img
+            class="main-image"
+            src="images/image-product-4.jpg"
+            alt="Product Image"
+            data-id="image-4"
+          />
+        </div>
+        <div class="small-images">
+          <div class="small-image">
+            <img
+              class="active"
+              src="images/image-product-1-thumbnail.jpg"
+              alt="Product Image"
+              data-id="image-1"
+            />
+          </div>
+          <div class="small-image">
+            <img
+              src="images/image-product-2-thumbnail.jpg"
+              alt="Product Image"
+              data-id="image-2"
+            />
+          </div>
+          <div class="small-image">
+            <img
+              src="images/image-product-3-thumbnail.jpg"
+              alt="Product Image"
+              data-id="image-3"
+            />
+          </div>
+          <div class="small-image">
+            <img
+              src="images/image-product-4-thumbnail.jpg"
+              alt="Product Image"
+              data-id="image-4"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="description">
+        <small class="small-header">Sneaker Company</small>
+        <h1 class="main-header">Fall Limited Edition Sneakers</h1>
+        <p class="product-description">
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they’ll withstand everything
+          the weather can offer.
+        </p>
+        <div class="price">
+          <h2>$125.00</h2>
+          <div class="discount">50%</div>
+        </div>
+        <small class="original-price">$250.00</small>
+
+        <div class="add-to-cart">
+          <div class="number-of-items">
+            <div class="decrease">-</div>
+            <p class="number-of-products">0</p>
+            <div class="increase">+</div>
+          </div>
+          <div class="add">
+            <div class="cart-add">
+              <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                  fill="#69707D"
+                  fill-rule="nonzero"
+                />
+              </svg>
+            </div>
+            <p>Add to Cart</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

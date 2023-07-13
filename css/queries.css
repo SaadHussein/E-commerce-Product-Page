@@ -1,0 +1,24 @@
+@media (max-width: 1665px) {
+  .navigation {
+    justify-content: center;
+    gap: 360px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .main {
+    width: 1350px;
+  }
+
+  .big-image img {
+    width: 680px;
+  }
+
+  .small-images {
+    width: 680px;
+  }
+
+  .images {
+    margin-right: 70px;
+  }
+}

@@ -7,7 +7,8 @@
 }
 
 body {
-  width: 1500px;
+  max-width: 1500px;
+  width: 100%;
   margin: 0 auto;
   font-family: "Kumbh Sans", sans-serif;
   position: relative;
@@ -26,6 +27,10 @@ body.onSlider {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 5;
+}
+
+.backdrop-in-mobile {
+  display: none;
 }
 
 .backdrop.activee {
@@ -159,21 +164,32 @@ body.onSlider {
   border: 5px solid hsl(26, 100%, 55%);
 }
 
+.slider-mobile {
+  display: none;
+}
+
 .navigation {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   width: 1300px;
   margin: 0 auto;
-  gap: 400px;
   padding: 30px 0;
   border-bottom: 1px solid rgb(169, 168, 168);
+}
+
+.navigation-in-mobile {
+  display: none;
 }
 
 .logo-list {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.slider-in-mobile {
+  display: none;
 }
 
 .logo-image {
@@ -329,7 +345,7 @@ body.onSlider {
 }
 
 .main {
-  width: 1350px;
+  width: 1300px;
   display: flex;
   margin: 100px auto 100px;
   align-items: center;

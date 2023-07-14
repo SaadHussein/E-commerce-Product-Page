@@ -29,12 +29,31 @@ const cartHaveItems = document.querySelector(".cart-have-items");
 const quantityOfItems = document.querySelector(".quantity-of-items");
 const totalPrice = document.querySelector(".total-price");
 const iconDelete = document.querySelector(".icon-for-delete");
+const sliderLeftInMobile = document.querySelector(".slider-left-in-mobile");
+const sliderRightInMobile = document.querySelector(".slider-right-in-mobile");
+const sliderInMobile = document.querySelector(".slider-in-mobile");
+const navigationInMobile = document.querySelector(".navigation-in-mobile");
+const backDropInMobile = document.querySelector(".backdrop-in-mobile");
+const closeInMobile = document.querySelector(".close-in-mobile");
+
+console.log(sliderLeftInMobile, sliderRightInMobile);
 
 let numberOfProducts = 0;
 let theRealNumberOfProducts = 0;
 let currentSlide = 1;
+let currentSlideInMobile = 1;
 
 init();
+
+sliderInMobile.addEventListener("click", () => {
+  navigationInMobile.classList.add("active-in-mobile");
+  backDropInMobile.classList.add("active-in-mobile");
+});
+
+closeInMobile.addEventListener("click", () => {
+  navigationInMobile.classList.remove("active-in-mobile");
+  backDropInMobile.classList.remove("active-in-mobile");
+});
 
 smallImages.forEach((image) => {
   image.addEventListener("click", showBigImage);
@@ -130,6 +149,19 @@ sliderLeft.addEventListener("click", () => {
   smallImageInSlider[currentSlide - 1].classList.add("active-in-slider");
 });
 
+sliderLeftInMobile.addEventListener("click", () => {
+  if (currentSlideInMobile === 1) {
+    return;
+  }
+
+  currentSlideInMobile--;
+  mainImages.forEach((image) => {
+    image.classList.remove("activeImage");
+  });
+
+  mainImages[currentSlideInMobile - 1].classList.add("activeImage");
+});
+
 sliderRight.addEventListener("click", () => {
   if (currentSlide === bigImageInSlider.length) {
     return;
@@ -146,6 +178,19 @@ sliderRight.addEventListener("click", () => {
 
   bigImageInSlider[currentSlide - 1].classList.add("activeImageInSlider");
   smallImageInSlider[currentSlide - 1].classList.add("active-in-slider");
+});
+
+sliderRightInMobile.addEventListener("click", () => {
+  if (currentSlideInMobile === mainImages.length) {
+    return;
+  }
+
+  currentSlideInMobile++;
+  mainImages.forEach((image) => {
+    image.classList.remove("activeImage");
+  });
+
+  mainImages[currentSlideInMobile - 1].classList.add("activeImage");
 });
 
 function setItemsToLocalStorage() {
